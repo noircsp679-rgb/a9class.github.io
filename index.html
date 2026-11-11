@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-9 PASPUT - Official Website
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter & Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #93c5fd;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="w-8 h-8 rounded-lg bg-brandBlue-600 text-white flex items-center justify-center font-bold text-lg font-heading shadow-md">A9</span>
+                <span class="font-bold text-xl font-heading text-brandBlue-900 tracking-wide">PASPUT</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#home" class="hover:text-brandBlue-600 transition-colors">Beranda</a>
+                <a href="#music" class="hover:text-brandBlue-600 transition-colors">Lagu Kelas</a>
+                <a href="#quotes" class="hover:text-brandBlue-600 transition-colors">Kata-Kata</a>
+                <a href="#gallery" class="hover:text-brandBlue-600 transition-colors">Galeri</a>
+                <a href="#contact" class="hover:text-brandBlue-600 transition-colors">Kontak & TikTok</a>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-blue-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-brandBlue-600">Beranda</a>
+            <a href="#music" class="block py-2 text-slate-700 hover:text-brandBlue-600">Lagu Kelas</a>
+            <a href="#quotes" class="block py-2 text-slate-700 hover:text-brandBlue-600">Kata-Kata</a>
+            <a href="#gallery" class="block py-2 text-slate-700 hover:text-brandBlue-600">Galeri</a>
+            <a href="#contact" class="block py-2 text-slate-700 hover:text-brandBlue-600">Kontak & TikTok</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="relative py-20 md:py-28 bg-gradient-to-b from-white via-blue-50 to-blue-100 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 bg-blue-100 text-brandBlue-700 rounded-full text-xs font-semibold uppercase tracking-widest mb-4 border border-blue-200">
+                Official Website
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold font-heading text-brandBlue-900 mb-6 leading-tight">
+                ALUMNI A-9 PASPUT<br><span class="text-brandBlue-600">A-9 PASPUT</span>
+            </h1>
+            <p class="text-base md:text-xl text-slate-600 max-w-2xl mx-auto mb-8 font-light italic">
+                "Terbang Tinggi, Sukses Pasti"
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#gallery" class="px-6 py-3 rounded-full bg-brandBlue-600 text-white font-medium hover:bg-brandBlue-700 transition shadow-lg shadow-blue-500/30">
+                    Lihat Galeri Foto <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                </a>
+                <a href="#contact" class="px-6 py-3 rounded-full bg-white text-brandBlue-700 border border-blue-200 font-medium hover:bg-blue-50 transition shadow-sm">
+                    Hubungi Pengurus
+                </a>
+            </div>
+        </div>
+        <!-- Decorative Background Elements -->
+        <div class="absolute -top-10 -left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40"></div>
+        <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-40"></div>
+    </section>
+
+    <!-- 2. Pemutar Lagu Kelas Section -->
+    <section id="music" class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-brandBlue-900 to-brandBlue-700 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+                
+                <!-- Vinyl / Disc Animation -->
+                <div class="relative flex-shrink-0">
+                    <div id="disc-icon" class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-white/20 bg-slate-900 flex items-center justify-center shadow-inner transition-transform duration-1000">
+                        <div class="w-8 h-8 rounded-full bg-brandBlue-500 border-2 border-white flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Player Info & Controls -->
+                <div class="w-full">
+                    <div class="text-center md:text-left mb-3">
+                        <span class="text-xs uppercase tracking-wider text-blue-200 font-semibold">Lagu Kelas</span>
+                        <h3 class="text-xl md:text-2xl font-bold font-heading">Kisah Klasik Untuk Masa Depan</h3>
+                        <p class="text-sm text-blue-100 opacity-90">TULUS - Tujuh Belas</p>
+
+                    <!-- Audio Element -->
+                    <!-- Catatan: Ganti src berikut dengan URL mp3 asli milik kelas kalian -->
+                    <audio id="class-audio" src="TULUS - Tujuh Belas (Official Lyric Video).mp3" preload="metadata"></audio>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full mb-3">
+                        <input type="range" id="seek-bar" value="0" class="w-full h-1.5 bg-blue-900/60 rounded-lg appearance-none cursor-pointer accent-white">
+                        <div class="flex justify-between text-xs text-blue-200 mt-1">
+                            <span id="current-time">0:00</span>
+                            <span id="duration">0:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="flex items-center justify-center md:justify-start space-x-4">
+                        <button id="play-btn" class="w-12 h-12 rounded-full bg-white text-brandBlue-900 flex items-center justify-center hover:bg-blue-50 transition shadow">
+                            <i class="fa-solid fa-play text-lg" id="play-icon"></i>
+                        </button>
+                        <span class="text-xs text-blue-200 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                            <i class="fa-solid fa-music mr-1"></i> Play to feel the memories
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Kata-Kata & Quotes Kelas -->
+    <section id="quotes" class="py-16 bg-blue-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-heading text-brandBlue-900">Kata-Kata & Impression</h2>
+                <div class="w-16 h-1 bg-brandBlue-600 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3">Ungkapan dan coretan kebersamaan kami selama di kelas</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Quote 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 hover:shadow-md transition">
+                    <div class="text-brandBlue-500 mb-4 text-3xl">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-4">
+                        "Bukan tentang seberapa sering kita mengeluh tugas banyak, tapi tentang seberapa keras kita tertawa bersama di tengah kepenatan itu."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue-700 flex items-center justify-center font-bold text-xs">
+                            KM
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">Ketua Kelas</h4>
+                            <p class="text-xs text-slate-500">A9 Pasput</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Quote 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 hover:shadow-md transition">
+                    <div class="text-brandBlue-500 mb-4 text-3xl">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-4">
+                        "Biru putih tak pernah seceria ini kalau bukan karena kekonyolan dan kehangatan teman-teman sekalian di kelas ini."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue-700 flex items-center justify-center font-bold text-xs">
+                            SEC
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">Sekretaris</h4>
+                            <p class="text-xs text-slate-500">A9 Pasput</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Quote 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 hover:shadow-md transition">
+                    <div class="text-brandBlue-500 mb-4 text-3xl">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-4">
+                        "Bayar kas tepat waktu itu penting, tapi menjaga tali persahabatan kita jauh lebih berharga dari segalanya!"
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue-700 flex items-center justify-center font-bold text-xs">
+                            BEN
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">Bendahara</h4>
+                            <p class="text-xs text-slate-500">A9 Pasput</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Galeri Foto Kelas -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-heading text-brandBlue-900">Galeri Foto Kelas</h2>
+                <div class="w-16 h-1 bg-brandBlue-600 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3">Momen Kebersamaan A9 Pasput</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput1.jpeg" alt="Foto Kelas" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/2563eb/ffffff?text=Foto+Kelas'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium"></span>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput3.jpeg" alt="Classmeeting" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=Classmeeting'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium"></span>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput2.jpeg" alt="Ulang Tahun Wali Kelas" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/3b82f6/ffffff?text=Wali+Kelas'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium"></span>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput4.jpeg" alt="Belajar Kelompok" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/1d4ed8/ffffff?text=Belajar+Kelompok'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium"></span>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput5.jpeg" alt="Praktek Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/60a5fa/ffffff?text=Praktek+Lab'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium"></span>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-blue-100 aspect-video shadow-md">
+                    <img src="pasput6.jpeg" alt="Jalan-jalan Kelas" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/93c5fd/ffffff?text=Jalan-Jalan'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <span class="text-white text-sm font-medium">L</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Kontak Pengurus & TikTok Kelas -->
+    <section id="contact" class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold font-heading text-brandBlue-900">Hubungi Kami & Media Sosial</h2>
+                <div class="w-16 h-1 bg-brandBlue-600 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3">Tetap terhubung dengan pengurus dan ikuti kegiatan seru kami!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card WhatsApp / Telepon -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex flex-col items-center text-center hover:border-blue-300 transition">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 font-heading">Kontak Pengurus Kelas</h3>
+                    <p class="text-sm text-slate-500 mb-4">Ada pertanyaan atau keperluan seputar kelas A9 Pasput?</p>
+                    
+                    <div class="w-full space-y-2">
+                        <a href="https://wa.me/60177352791" target="_blank" class="block w-full py-2.5 px-4 bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm font-medium transition shadow-sm">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Official A9 Pasput (+60177352791)
+                        </a>
+                        <a href="tel:+60177352791" class="block w-full py-2.5 px-4 bg-blue-50 hover:bg-blue-100 text-brandBlue-700 rounded-xl text-sm font-medium transition">
+                            <i class="fa-solid fa-phone mr-2"></i> Telepon Official A9 Pasput
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card TikTok Kelas -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex flex-col items-center text-center hover:border-blue-300 transition">
+                    <div class="w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 font-heading">TikTok Resmi Kelas</h3>
+                    <p class="text-sm text-slate-500 mb-4">Tonton konten keseruan, trend, dan dokumentasi kelas kami!</p>
+                    
+                    <div class="w-full mt-auto">
+                        <!-- Ubah URL berikut ke username TikTok kelas kamu -->
+                        <a href="https://www.tiktok.com/@alumniangkatan9_pasput" target="_blank" class="flex items-center justify-center w-full py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-sm font-medium transition shadow-md">
+                            <i class="fa-brands fa-tiktok mr-2"></i> Follow @alumniangkatan9_pasaput
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-brandBlue-900 text-white py-8 border-t border-brandBlue-700">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-3">
+                <span class="w-6 h-6 rounded bg-brandBlue-600 text-white flex items-center justify-center font-bold text-xs">XI</span>
+                <span class="font-bold text-lg font-heading tracking-wide">A9 Pasput</span>
+            </div>
+            <p class="text-xs text-blue-200">
+                &copy; 2026 A9 Pasput. Built with <i class="fa-solid fa-heart text-red-400 mx-1"></i> Blue & White Theme.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Audio Player Logic
+        const audio = document.getElementById('class-audio');
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const seekBar = document.getElementById('seek-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const discIcon = document.getElementById('disc-icon');
+
+        let isPlaying = false;
+
+        // Toggle Play / Pause
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        });
+
+        audio.addEventListener('play', () => {
+            isPlaying = true;
+            playIcon.classList.remove('fa-play');
+            playIcon.classList.add('fa-pause');
+            discIcon.classList.add('animate-spin');
+        });
+
+        audio.addEventListener('pause', () => {
+            isPlaying = false;
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+            discIcon.classList.remove('animate-spin');
+        });
+
+        // Format waktu (detik ke mm:ss)
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Update progress bar & waktu
+        audio.addEventListener('loadedmetadata', () => {
+            seekBar.max = Math.floor(audio.duration);
+            durationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            seekBar.value = Math.floor(audio.currentTime);
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        // Seek audio ketika slider diubah
+        seekBar.addEventListener('input', () => {
+            audio.currentTime = seekBar.value;
+        });
+    </script>
+</body>
+</html>
